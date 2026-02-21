@@ -1,0 +1,30 @@
+services:                                     
+  readeck:                          
+    image: codeberg.org/readeck/readeck:latest                     
+    container_name: ${CONTAINER_NAME}         
+    networks:               
+      - 1panel-network
+    ports:              
+      - "${PANEL_APP_PORT_HTTP}:8000"
+    environment:
+      # 数据库连接字符串，格式：postgres://用户名:密码@数据库容器名:端口/数据库名
+      - READECK_DATABASE_SOURCE=postgres://${DB_TYPE_USERNAME}:${DB_TYPE_PASSWORD}@${DB_TYPE_HOSTNAME}:${DB_TYPE_PORT}/${DB_TYPE_DATABASE}
+      # 应用日志级别，可选值：error（错误）、warn（警告）、info（信息）、debug（调试）
+      - READECK_LOG_LEVEL=error
+      # Readeck服务监听的IP地址（0.0.0.0表示监听所有网卡）
+      - READECK_SERVER_HOST=0.0.0.0
+      # Readeck服务监听的TCP端口，需与上方端口映射的容器端口（冒号右侧）保持一致
+      - READECK_SERVER_PORT=8000
+      # 日志格式（text为易读的文本格式）
+      - READECK_LOG_FORMAT=text
+      # 可选配置：Readeck的URL前缀（如非根路径访问时需配置）
+      # - READECK_SERVER_PREFIX="/"
+      # 时区设置
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ./data:/readeck
+    labels:                                   
+      createdBy: "Apps"                       
+networks:
+  1panel-network:
+    external: true

@@ -1,0 +1,85 @@
+# === 官方应用商店兼容字段（上架官方商店必填，其余情况选填） ===
+# https://apps.fit2cloud.com/1panel
+# 显示名称
+name: FastSend
+# 分类标签
+tags: 建站
+# 副标题
+title: FastSend 是一个基于 WebRTC 技术的点对点文件传输工具，支持快速的目录同步和文件传输。
+# 应用描述
+description: FastSend 是一个基于 WebRTC 技术的点对点文件传输工具，支持快速的目录同步和文件传输。
+
+# === 以下为 1Panel 应用商店解析的数据结构，必须保留此结构 ===
+additionalProperties:
+  # === 必填字段 ===
+  # 应用程序唯一标识符，用于系统内部识别及创建文件夹，仅限英文小写（必填）
+  key: gracelsy-fastsend
+  # 应用程序显示名称（必填）
+  name: FastSend
+  # 应用程序类型（必填）
+  # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
+  #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
+  #        tool: 工具类应用，大部分应用不属于上述两类的，可归为工具类，如 FileBrowser、phpMyAdmin 等
+  type: website
+  # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
+  tags:
+    - Website
+    - Local
+
+  # === 描述信息字段（选填，建议填写）===
+  # 多语言描述，建议20-30个字符，v2 版本格式
+  description:
+    # 简体中文
+    zh: FastSend 是一个基于 WebRTC 技术的点对点文件传输工具，支持快速的目录同步和文件传输。
+    # 繁体中文
+    zh-hant: FastSend 是一款基於 WebRTC 技術的點對點檔案傳輸工具，支援快速的目錄同步與檔案傳輸功能。
+    # 英文
+    en: FastSend is a peer-to-peer file transfer tool based on WebRTC technology, supporting fast directory synchronization and file transmission.
+    # 日语
+    ja: FastSend は WebRTC 技術に基づくピアツーピアファイル転送ツールであり、高速なディレクトリ同期とファイル転送をサポートします。
+    # 马来语
+    ms: FastSend ialah alat pemindahan fail peer-to-peer berdasarkan teknologi WebRTC, yang menyokong penyegerakan direktori dan pemindahan fail dengan pantas.
+    # 巴西葡萄牙语
+    pt-br: O FastSend é uma ferramenta de transferência de arquivos peer-to-peer baseada na tecnologia WebRTC, que oferece suporte à sincronização rápida de diretórios e transferência de arquivos.
+    # 俄语
+    ru: FastSend — это инструмент для передачи файлов по технологии peer-to-peer на основе WebRTC, поддерживающий быструю синхронизацию каталогов и передачу файлов.
+    # 韩语
+    ko: FastSend는 WebRTC 기술 기반의 피어 투 피어 파일 전송 도구로, 빠른 디렉토리 동기화와 파일 전송을 지원합니다.
+    # 土耳其语
+    tr: FastSend, WebRTC teknolojisine dayalı eşten eşe dosya aktarım aracıdır ve hızlı dizin senkronizasyonu ile dosya aktarımını destekler.
+
+  # === 功能配置字段（选填）===
+  # 是否支持跨版本更新，默认false
+  crossVersionUpdate: true
+  # 安装数量限制，0表示无限制，默认0
+  limit: 0
+  # 推荐级别，数值越小越推荐，用于应用商店排序，默认9999
+  recommend: 0
+
+  # === 链接信息字段（选填）===
+  # 官方网站链接，必须是有效的 HTTP/HTTPS URL
+  website: https://fastsend.ing/
+  # GitHub 仓库链接，必须是有效的HTTP/HTTPS URL
+  github: https://github.com/ShouChenICU/FastSend/
+  # 文档链接，必须是有效的HTTP/HTTPS URL
+  document: https://github.com/ShouChenICU/FastSend/
+
+  # === 系统要求字段（选填）===
+  # 内存要求（MB），用于系统资源检查和用户提示
+  # 常见值：512, 1024, 2048, 4096
+  # memoryRequired: 512
+  # 支持的 CPU 架构数组
+  # 可选值：amd64, arm64, armv7, ppc64le, s390x, riscv64
+  architectures:
+    - amd64
+    - arm64
+
+  # 是否需要GPU支持，默认false
+  gpuSupport: false
+  
+  # === 版本兼容性字段（选填）===
+  # 最低面板版本要求，0表示无要求，默认0
+  # 示例：1.0, 1.5, 2.0
+  version: 0
+  # 废弃版本标记，0表示未废弃，默认0，若不为 0，则与当前系统版本号对比，若大于等于该版本号，则不出现在应用商店中
+  deprecated: 0

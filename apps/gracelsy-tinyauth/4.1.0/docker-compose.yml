@@ -1,0 +1,35 @@
+services:
+  tinyauth:
+    image: ghcr.io/steveiliop56/tinyauth:v4.1.0
+    container_name: ${CONTAINER_NAME}
+    environment:
+        - SECURE_COOKIE=true
+        - USERS_FILE=/tinyauth/users_file 
+        - APP_URL=${PANEL_TINYAUTH_APP_URL}
+        - BACKGROUND_IMAGE=${BACKGROUND_IMAGE} # 登录页面的背景图片 URL。 
+        - LOGIN_MAX_RETRIES=3                  # 最大尝试次数  
+        - LOGIN_TIMEOUT=300                    # 登陆错误后需要等待再试时间，单位为秒
+        - OAUTH_WHITELIST=${OAUTH_WHITELIST}   # 使用OAuth时，指定在OAuth提供商中允许谁登录 以逗号分隔的电子邮件地址白名单列表。
+        - PROVIDERS_${OAUTH}_NAME=${NAME}
+        - PROVIDERS_${OAUTH}_CLIENT_ID=${CLIENT_ID}
+        - PROVIDERS_${OAUTH}_CLIENT_SECRET=${CLIENT_SECRET}
+        - PROVIDERS_${OAUTH}_AUTH_URL=${AUTH_URL}
+        - PROVIDERS_${OAUTH}_TOKEN_URL=${TOKEN_URL}
+        - PROVIDERS_${OAUTH}_USER_INFO_URL=${USER_INFO}
+        - PROVIDERS_${OAUTH}_REDIRECT_URL=${PANEL_TINYAUTH_APP_URL}/api/oauth/callback/${OAUTH}
+        - PROVIDERS_${OAUTH}_SCOPES=${SCOPES}
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    labels:
+      createdBy: "Apps"
+    networks:
+      - 1panel-network
+    restart: always
+    volumes:
+      - ./data:/data
+      - ./data/users_file:/tinyauth/users_file
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  1panel-network:
+    external: true

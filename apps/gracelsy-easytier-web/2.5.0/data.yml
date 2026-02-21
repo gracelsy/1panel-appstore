@@ -1,0 +1,51 @@
+additionalProperties:
+  formFields:
+    - default: "11211"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
+
+    - default: "admin"
+      edit: true
+      envKey: CONFIG_USER
+      labelEn: USER(The web console has two default accounts with the usernames and passwords admin and user respectively. Although these are regular accounts, their existence still requires attention.)
+      labelZh: 用户(Web 控制台有了两个默认账户，用户名与密码分别为admin和user。虽然这属于普通账户，但仍需留意其存在)
+      required: true
+      type: text
+
+    - default: "easytier"
+      edit: false
+      envKey: MACHINE_ID
+      labelEn: machine_id(Specify the machine code; if the machine code fails to be obtained, the configuration will be lost after a restart.)
+      labelZh: machine_id(指定机器码，若机器码获取失败会导致重启后配置丢失)
+      required: true
+      type: text
+      random: true
+
+    - default: "http://127.0.0.1:11211"
+      edit: true
+      envKey: API_HOST
+      labelEn: API Host
+      labelZh: API Host(反向代理的地址或http://ip:11211)
+      required: true
+      type: text     
+
+    - default: "22020"
+      edit: true
+      envKey: CONFIG_SERVER_PORT
+      labelEn: CONFIG_SERVER_PORT(Configuration delivery service port for easytier-core node connection)
+      labelZh: CONFIG_SERVER_PORT(用于 easytier-core 节点连接的配置下发服务端口)
+      required: true
+      type: text

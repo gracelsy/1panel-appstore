@@ -1,0 +1,67 @@
+additionalProperties:
+  formFields:
+    - default: "13489"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
+
+    - default: "mysql"
+      edit: false
+      envKey: DB_TYPE
+      labelEn: Database Type
+      labelZh: 数据库类型
+      required: true
+      type: text
+
+    - default: "MariaDB"
+      edit: false
+      envKey: DB_TYPE_HOSTNAME
+      labelEn: Database Hostname
+      labelZh: 数据库地址
+      required: true
+      type: text
+
+    - default: "dnsmgr"
+      edit: false
+      envKey: DB_TYPE_DATABASE
+      labelEn: Database Name
+      labelZh: 数据库名称
+      required: true
+      type: text
+
+    - default: "dnsmgr"
+      edit: false
+      envKey: DB_TYPE_USERNAME
+      labelEn: Database Username
+      labelZh: 数据库用户名
+      required: true
+      type: text
+
+    - default: ""
+      edit: false
+      envKey: DB_TYPE_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      required: true
+      type: password
+
+    - default: "3306"
+      edit: false
+      envKey: DB_TYPE_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      required: true
+      rule: paramPort
+      type: number

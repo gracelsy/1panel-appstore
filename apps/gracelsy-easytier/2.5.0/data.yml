@@ -1,0 +1,35 @@
+additionalProperties:
+  formFields:
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
+
+    - default: "admin"
+      edit: true
+      envKey: CONFIG_USER
+      labelEn: USER
+      labelZh: 用户
+      required: true
+      type: text
+
+    - default: "udp://127.0.0.1:22020"
+      edit: true
+      envKey: API_HOST
+      labelEn: API Host
+      labelZh: API Host
+      required: true
+      type: text     
+      
+    - default: "easytier"
+      edit: false
+      envKey: MACHINE_ID
+      labelEn: machine_id(Specify the machine code; if the machine code fails to be obtained, the configuration will be lost after a restart.)
+      labelZh: machine_id(指定机器码，若机器码获取失败会导致重启后配置丢失)
+      required: true
+      type: text
+      random: true
+

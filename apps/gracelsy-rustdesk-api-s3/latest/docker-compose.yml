@@ -1,0 +1,35 @@
+services:                                     
+  fastsend:                          
+    image: lejianwen/rustdesk-server-s6:latest
+    container_name: ${CONTAINER_NAME}     
+    networks:                                 
+      - 1panel-network                        
+    ports:                                    
+      - "21114:21114/tcp" # 21114/tcp 用于网页控制台
+      - "21115:21115/tcp" # 21115/tcp 用于 NAT 类型测试
+      - "21116:21116/TCP" # 21116/TCP 用于 TCP 打洞和连接服务
+      - "21116:21116/UDP" # 21116/UDP 用于 ID 注册和心跳服务
+      - "21117:21117/TCP" # 21117/TCP 用于中继服务
+      - "21118:21118/TCP" # 21118/TCP 用于支持网页客户端
+      - "21119:21119/TCP" # 21119/TCP 用于支持网页客户端
+    environment:
+      - TZ=${TIME_ZONE}                       # 时区设置
+      - ENCRYPTED_ONLY=1                      # 强制加密传输
+      - RUSTDESK_API_LANG=zh-CN               # 默认语言为中文
+      - RUSTDESK_API_APP_TOKEN_EXPIRE=8787h   # 客户端账号登陆过期时间，默认是七天未使用就登出账号，默认只支持h,m,s
+      - RUSTDESK_API_ADMIN_TITLE=RustDesk 控制台
+      - RELAY=${RUSTDESK_RELAY_SERVE}
+      - RUSTDESK_API_RUSTDESK_ID_SERVER=${RUSTDESK_ID_SERVER}
+      - RUSTDESK_API_RUSTDESK_RELAY_SERVE=${RUSTDESK_RELAY_SERVE}
+      - RUSTDESK_API_RUSTDESK_API_SERVER=${RUSTDESK_API_SERVER}
+      - RUSTDESK_API_RUSTDESK_WS_HOST=${RUSTDESK_WS_HOST}
+
+    volumes:
+       - ./data/server:/data          # 将server的key挂载出来
+       - ./data/server:/app/conf/data # 挂载key文件到api容器
+       - ./data/api:/app/data         # 将数据库挂载
+    labels:                                   
+      createdBy: "Apps"                       
+networks:
+  1panel-network:
+    external: true

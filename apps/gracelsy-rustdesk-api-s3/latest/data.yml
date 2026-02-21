@@ -1,0 +1,50 @@
+additionalProperties:
+  formFields:
+    - default: "21114"
+      edit: false
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
+
+    - default: "domian.com:21116"
+      edit: true
+      envKey: RUSTDESK_ID_SERVER
+      labelEn: RustDesk ID Server
+      labelZh: RustDesk ID服务器(用于网页客服端连接)
+      required: true
+      type: text
+
+    - default: "domian.com:21117"
+      edit: true
+      envKey: RUSTDESK_RELAY_SERVE
+      labelEn: RustDesk Relay Server
+      labelZh: RustDesk 中继服务器(用于网页客服端连接)
+      required: true
+      type: text
+
+    - default: "https://domian.com"
+      edit: true
+      envKey: RUSTDESK_API_SERVER
+      labelEn: RustDesk API Server
+      labelZh: Rustdesk的api服务器地址
+      required: true
+      type: text
+
+    - default: "wss://domian.com"
+      edit: true
+      envKey: RUSTDESK_WS_HOST
+      labelEn: RustDesk WS Host
+      labelZh: RustDesk WS Host(用于网页客服端连接)
+      required: true
+      type: text

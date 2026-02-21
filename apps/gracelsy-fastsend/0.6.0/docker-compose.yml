@@ -1,0 +1,18 @@
+services:                                     
+  fastsend:                          
+    image: shouchenicu/fastsend:0.6.0                       
+    container_name: ${CONTAINER_NAME}         
+    networks:                                 
+      - 1panel-network                        
+    command: node server/index.mjs
+    ports:                                    
+      - "${PANEL_APP_PORT_HTTP}:3000"
+
+    environment:
+      - NODE_ENV=production   
+      - TZ=${TIME_ZONE}                       # 时区设置
+    labels:                                   
+      createdBy: "Apps"                       
+networks:
+  1panel-network:
+    external: true

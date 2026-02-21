@@ -1,0 +1,99 @@
+additionalProperties:
+  formFields:
+    - default: 14389
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "https://auth.domain.com"
+      edit: true
+      envKey: PANEL_TINYAUTH_APP_URL
+      labelEn: App URL
+      labelZh: 应用地址(请替换域名,注意必须是二级域名)
+      required: true
+      type: text
+
+    - default: "https://gh.zsir.us.kg/https://github.com/gracelsy/picx-images-hosting/raw/master/%E8%93%9D%E7%9C%BC%E7%9D%9B%E7%9A%84%E7%8C%AB%E5%A5%B3%E5%AD%A9.6bh7lxgqfc.webp"
+      edit: true
+      envKey: BACKGROUND_IMAGE
+      labelEn: BACKGROUND_IMAGE
+      labelZh: 登录页面的背景图片URL
+      required: false
+      type: text
+
+    - default: "github"
+      edit: true
+      envKey: OAUTH
+      labelEn: Auth提供商
+      labelZh: Auth提供商（默认github）
+      required: false
+      type: text
+
+
+    - default: ""
+      edit: true
+      envKey: CLIENT_ID
+      labelEn: CLIENT_ID
+      labelZh: 客户端ID （CLIENT_ID）
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: CLIENT_SECRET
+      labelEn: CLIENT_SECRET
+      labelZh: 客户端密钥 （CLIENT_SECRET）
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: NAME
+      labelEn: Name of the OAuth provider
+      labelZh: OAuth提供者的名称
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: AUTH_URL
+      labelEn: Auth URL
+      labelZh: 认证地址 （Auth URL）
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: TOKEN_URL
+      labelEn: Token URL
+      labelZh: 令牌地址 （TOKEN_URL）
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: USER_INFO
+      labelEn: USER_INFO
+      labelZh: 用户信息地址（USER_INFO）
+      required: false
+      type: text
+
+    - default: "openid profile email offline_access"
+      edit: true
+      envKey: SCOPES
+      labelEn: SCOPES
+      labelZh: 授权权限范围（SCOPES）
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: OAUTH_WHITELIST
+      labelEn: OAUTH_WHITELIST
+      labelZh: Auth 白名单（逗号分隔的电子邮件地址白名单列表）
+      required: false
+      type: text

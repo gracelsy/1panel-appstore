@@ -1,0 +1,22 @@
+name: mTab
+tags:
+  - 建站
+title: 书签导航程序
+description: 书签导航程序
+additionalProperties:
+  key: gracelsy-mtab
+  name: mTab
+  tags:
+    - Website
+  shortDescZh: 书签导航程序
+  shortDescEn: Bookmark navigator
+  description:
+    en: Bookmark navigator
+    zh: 书签导航程序
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.mtab.cc
+  github: https://github.com/tsxcw/mtab
+  document: https://www.mtab.cc

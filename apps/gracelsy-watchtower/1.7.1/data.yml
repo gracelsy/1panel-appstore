@@ -1,0 +1,9 @@
+additionalProperties:
+  formFields:
+    - default: --interval 3600 --cleanup
+      edit: true
+      envKey: COMMAND1
+      labelEn: Command parameters (separated by spaces)
+      labelZh: 命令参数(以空格分割)
+      required: true
+      type: text

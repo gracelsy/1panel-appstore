@@ -1,0 +1,77 @@
+# GitHub Actions 工作流：强制同步代码到 Gitee 平台
+name: Sync commits to Gitee (force)
+
+# 触发条件
+on:
+  # 定时触发：每 6 小时执行一次
+  schedule:
+    - cron: "0 */6 * * *"   # 每 6 小时执行一次
+  # 代码推送触发：当代码推送到 main 分支时
+  push:
+    branches:
+      - main
+  # 手动触发：可通过 GitHub 界面手动执行
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Manual trigger reason'
+        required: false
+        default: 'Manual run'
+
+# 执行任务
+jobs:
+  sync:
+    # 运行环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+
+    # 执行步骤
+    steps:
+      # 步骤 1：检出 GitHub 仓库代码
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v5
+        with:
+          ref: main          # 检出 main 分支
+          fetch-depth: 0     # 获取完整的 Git 历史
+
+      # 步骤 2：检查过去 6 小时内是否有新提交
+      - name: Check if there are commits in the last 6 hours
+        id: check           # 步骤 ID，用于后续条件判断
+        run: |
+          # 获取过去 6 小时内的提交记录
+          NEW_COMMITS=$(git log --since="6 hours ago" --oneline)
+          # 如果没有新提交，设置跳过标志
+          if [ -z "$NEW_COMMITS" ]; then
+            echo "No new commits in the last 6 hours, skip sync."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            # 如果有新提交，显示提交信息并设置继续标志
+            echo "New commits found:"
+            echo "$NEW_COMMITS"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      # 步骤 3：添加 Gitee 远程仓库并强制推送（仅当有新提交时执行）
+      - name: Add Gitee remote and force push
+        if: steps.check.outputs.skip == 'false'  # 条件判断：仅当步骤 2 检测到新提交时执行
+        env:
+          # 从 GitHub Secrets 中获取 Gitee 平台的认证信息
+          GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          # 删除现有 .git 目录，完全重置 Git 环境
+          rm -rf .git
+          # 重新初始化 Git 仓库
+          git init
+          # 配置 Git 用户信息
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          # 添加所有文件到暂存区
+          git add .
+          # 创建包含当前时间戳的新提交
+          git commit -m "Sync commit ==> [$(date +"%Y-%m-%d %H:%M:%S")]"
+          # 将分支重命名为 main
+          git branch -M main
+          # 添加 Gitee 远程仓库（使用保密信息中的用户名和令牌）
+          git remote add origin "https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_TOKEN }}@gitee.com/gracelsy/appstore.git"
+          # 强制推送到 Gitee 仓库的 main 分支（--force 强制覆盖，--quiet 静默执行）
+          git push --force --quiet origin main
