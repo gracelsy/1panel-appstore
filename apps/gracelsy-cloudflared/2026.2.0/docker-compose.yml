@@ -1,0 +1,9 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:2026.2.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    command: tunnel --no-autoupdate run --token ${CFD_TOKEN}
+    labels:  
+      createdBy: "Apps"

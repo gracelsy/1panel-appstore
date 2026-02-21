@@ -1,0 +1,21 @@
+name: cloudflared
+tags:
+  - 实用工具
+title: Cloudflare Tunnel 客户端
+description: Cloudflare Tunnel 客户端
+additionalProperties:
+  key: gracelsy-cloudflared
+  name: cloudflared
+  tags:
+    - Tool
+  shortDescZh: Cloudflare Tunnel 客户端
+  shortDescEn: Client for Cloudflare Tunnel
+  description:
+    en: Client for Cloudflare Tunnel
+    zh: Cloudflare Tunnel 客户端
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/
+  github: https://github.com/cloudflare/cloudflared
+  document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/

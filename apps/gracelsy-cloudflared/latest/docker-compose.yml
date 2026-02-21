@@ -1,0 +1,10 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    pull_policy: always
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    command: tunnel --no-autoupdate run --token ${CFD_TOKEN}
+    labels:
+      createdBy: "Apps"
