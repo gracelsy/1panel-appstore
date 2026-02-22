@@ -2,17 +2,18 @@ additionalProperties:
   formFields:
     - default: 6666
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
       label:
-        en: Port
-        ja: ポート
-        ms: Port
-        pt-br: Porta
-        ru: Порт
-        ko: 포트
-        zh-Hant: 埠
         zh: 端口
+        en: Port
       required: true
       rule: paramPort
       type: number
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      label:
+        zh: 时区
+        en: Time Zone
+      required: true
+      type: text

@@ -25,3 +25,4 @@ services:
       - IPTABLES_MODE=legacy
       - V2RAYA_NFTABLES_SUPPORT=off
       - V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray
+      - TZ=${TIME_ZONE}

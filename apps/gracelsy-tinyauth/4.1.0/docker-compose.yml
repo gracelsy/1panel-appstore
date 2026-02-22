@@ -18,6 +18,7 @@ services:
         - PROVIDERS_${OAUTH}_USER_INFO_URL=${USER_INFO}
         - PROVIDERS_${OAUTH}_REDIRECT_URL=${PANEL_TINYAUTH_APP_URL}/api/oauth/callback/${OAUTH}
         - PROVIDERS_${OAUTH}_SCOPES=${SCOPES}
+        - TZ=${TIME_ZONE} # 时区设置
     ports:
       - "${PANEL_APP_PORT_HTTP}:3000"
     labels:

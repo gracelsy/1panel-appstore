@@ -3,7 +3,20 @@ additionalProperties:
     - default: --interval 3600 --cleanup
       edit: true
       envKey: COMMAND1
-      labelEn: Command parameters (separated by spaces)
-      labelZh: 命令参数(以空格分割)
+      label:
+        zh: 命令参数
+        en: Command parameters
+      description:
+        zh: 以空格分割
+        en: Separated by spaces
+      required: true
+      type: text
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      label:
+        zh: 时区
+        en: Time Zone
       required: true
       type: text

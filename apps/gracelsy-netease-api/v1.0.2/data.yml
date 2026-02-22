@@ -3,8 +3,18 @@ additionalProperties:
     - default: "23875"
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
+      label:
+        zh: 端口
+        en: Port
       required: true
       rule: paramPort
       type: number
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      label:
+        zh: 时区
+        en: Time Zone
+      required: true
+      type: text

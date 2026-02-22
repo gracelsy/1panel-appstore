@@ -3,8 +3,9 @@ additionalProperties:
     - default: "43045"
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Web Port
-      labelZh: Web端口
+      label:
+        zh: Web端口
+        en: Web Port
       required: true
       rule: paramPort
       type: number
@@ -12,48 +13,54 @@ additionalProperties:
     - default: "Asia/Shanghai"
       edit: true
       envKey: TIME_ZONE
-      labelEn: Time Zone
-      labelZh: 时区
+      label:
+        zh: 时区
+        en: Time Zone
       required: true
       type: text
 
     - default: "PostgreSQL"
       edit: true
       envKey: DB_TYPE_HOSTNAME
-      labelEn: Database Hostname
-      labelZh: 数据库地址
+      label:
+        zh: 数据库地址
+        en: Database Hostname
       required: true
       type: text
 
     - default: "readeck"
       edit: true
       envKey: DB_TYPE_DATABASE
-      labelEn: Database Name
-      labelZh: 数据库名称
+      label:
+        zh: 数据库名称
+        en: Database Name
       required: true
       type: text
 
     - default: "readeck"
       edit: true
       envKey: DB_TYPE_USERNAME
-      labelEn: Database Username
-      labelZh: 数据库用户名
+      label:
+        zh: 数据库用户名
+        en: Database Username
       required: true
       type: text
 
     - default: ""
       edit: true
       envKey: DB_TYPE_PASSWORD
-      labelEn: Database Password
-      labelZh: 数据库密码
+      label:
+        zh: 数据库密码
+        en: Database Password
       required: true
       type: password
 
     - default: "5432"
       edit: true
       envKey: DB_TYPE_PORT
-      labelEn: Database Port
-      labelZh: 数据库端口
+      label:
+        zh: 数据库端口
+        en: Database Port
       required: true
       rule: paramPort
       type: number

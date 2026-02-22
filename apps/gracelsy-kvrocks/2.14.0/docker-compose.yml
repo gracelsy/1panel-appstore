@@ -9,6 +9,8 @@ services:
       - ${PANEL_APP_PORT_HTTP}:6666
     volumes:
       - ./data:/var/lib/kvrocks
+    environment:
+      - TZ=${TIME_ZONE}
     labels:
       createdBy: "Apps"
 

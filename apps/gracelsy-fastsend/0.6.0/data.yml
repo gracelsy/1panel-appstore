@@ -3,15 +3,17 @@ additionalProperties:
     - default: "43000"
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Web Port
-      labelZh: Web端口
+      label:
+        zh: Web端口
+        en: Web Port
       required: true
       rule: paramPort
       type: number
     - default: "Asia/Shanghai"
       edit: true
       envKey: TIME_ZONE
-      labelEn: Time Zone
-      labelZh: 时区
+      label:
+        zh: 时区
+        en: Time Zone
       required: true
       type: text

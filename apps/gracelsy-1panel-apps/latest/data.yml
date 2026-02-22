@@ -3,29 +3,33 @@ additionalProperties:
     - default: ""
       edit: true
       envKey: IMAGE
-      labelEn: Docker Image
-      labelZh: Docker 镜像
+      label:
+        zh: Docker 镜像
+        en: Docker Image
       required: true
       type: text
     - default: ""
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Web Port
-      labelZh: Web 端口
+      label:
+        zh: Web 端口
+        en: Web Port
       required: true
       rule: paramPort
       type: number
     - default: ""
       edit: true
       envKey: DATA_PATH_INTERNAL
-      labelEn: Internal Data Path
-      labelZh: 内部数据路径
+      label:
+        zh: 内部数据路径
+        en: Internal Data Path
       required: true
       type: text
     - default: "Asia/Shanghai"
       edit: true
       envKey: TIME_ZONE
-      labelEn: Time Zone
-      labelZh: 时区
+      label:
+        zh: 时区
+        en: Time Zone
       required: true
       type: text

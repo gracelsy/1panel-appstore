@@ -8,6 +8,8 @@ services:
     user: "0"
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
+    environment:
+      - TZ=${TIME_ZONE}
     volumes:
       - "./data:/app"
     labels:  

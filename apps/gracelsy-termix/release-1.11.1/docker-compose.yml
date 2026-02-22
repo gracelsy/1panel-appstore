@@ -14,7 +14,8 @@ services:
     volumes:
       - ./data:/app/data
     environment:
-      PORT: "8080"
+      - PORT=8080
+      - TZ=${TIME_ZONE}
 
 networks:
   1panel-network:

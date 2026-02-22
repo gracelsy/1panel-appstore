@@ -3,32 +3,37 @@ additionalProperties:
     - default: "./data"
       edit: true
       envKey: V2RAYA_ROOT_PATH
-      labelZh: 数据持久化路径
-      labelEn: Data persistence path
       label:
-        en: Data persistence path
         zh: 数据持久化路径
+        en: Data persistence path
       required: true
       type: text
+
     - default: 2017
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelZh: WebUI 端口
-      labelEn: WebUI port
       label:
-        en: WebUI port
         zh: WebUI 端口
+        en: WebUI port
       required: true
       rule: paramPort
       type: number
+
     - default: 32346
       edit: true
       envKey: PANEL_APP_PORT_PLUGIN
-      labelZh: 插件监听端口
-      labelEn: Plugin listening port
       label:
-        en: Plugin listening port
         zh: 插件监听端口
+        en: Plugin listening port
       required: true
       rule: paramPort
       type: number
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      label:
+        zh: 时区
+        en: Time Zone
+      required: true
+      type: text

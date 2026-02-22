@@ -3,23 +3,26 @@ additionalProperties:
     - default: 40090
       edit: true
       envKey: PANEL_APP_PORT_HTTPS
-      labelEn: HTTPS Port
-      labelZh: HTTPS端口
+      label:
+        zh: HTTPS端口
+        en: HTTPS Port
       required: true
       rule: paramPort
       type: number
     - default: ''
       edit: true
       envKey: HTTP_USER
-      labelEn: Access User
-      labelZh: 访问用户
+      label:
+        zh: 访问用户
+        en: Access User
       required: false
       type: text
     - default: ''
       edit: true
       envKey: HTTP_PWD
-      labelEn: Access Password
-      labelZh: 访问密码
+      label:
+        zh: 访问密码
+        en: Access Password
       random: false
       required: false
       rule: paramComplexity
@@ -27,14 +30,28 @@ additionalProperties:
     - default: "512m"
       edit: true
       envKey: MEM_USE
-      labelEn: Shared memory footprint (1gb)
-      labelZh: 共享内存占用(1gb)
+      label:
+        zh: 共享内存占用
+        en: Shared memory footprint
+      description:
+        zh: 1gb
+        en: 1gb
       required: true
       type: text
     - default: ./data
       edit: true
       envKey: DATA_PATH
-      labelEn: Data folder path
-      labelZh: 数据文件夹路径
+      label:
+        zh: 数据文件夹路径
+        en: Data folder path
+      required: true
+      type: text
+
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      label:
+        zh: 时区
+        en: Time Zone
       required: true
       type: text

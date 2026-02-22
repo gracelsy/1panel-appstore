@@ -6,6 +6,8 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:5000"
+    environment:
+      - TZ=${TIME_ZONE}
     image: willowgod/netease-api:v1.0.2
     labels:  
       createdBy: "Apps"

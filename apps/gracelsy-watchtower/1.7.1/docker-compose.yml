@@ -7,7 +7,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
     command: ${COMMAND1}
     image: containrrr/watchtower:1.7.1
     labels:

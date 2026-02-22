@@ -26,3 +26,4 @@ services:
       - V2RAYA_LOG_FILE=/tmp/v2raya.log
       - V2RAYA_PLUGINLISTENPORT=32346
       - V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray
+      - TZ=${TIME_ZONE}

@@ -9,6 +9,8 @@ services:
       - "${PANEL_APP_PORT_HTTP}:80"
     volumes:
       - ./data/.env:/app/www/.env
+    environment:
+      - TZ=${TIME_ZONE}
     networks:
       - 1panel-network
 
