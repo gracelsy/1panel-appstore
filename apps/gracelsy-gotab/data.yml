@@ -3,11 +3,12 @@
 # 显示名称
 name: GoTab
 # 分类标签
-tags: 建站
+tags:
+  - 建站
 # 副标题
-title: GoTab 是一个性化浏览器新标签页、起始页、个人主页。
+title: GoTab 是一个个性化浏览器新标签页、起始页、个人主页。
 # 应用描述
-description: GoTab 是一个性化浏览器新标签页、起始页、个人主页。
+description: GoTab 是一个个性化浏览器新标签页、起始页、个人主页。
 
 # === 以下为 1Panel 应用商店解析的数据结构，必须保留此结构 ===
 additionalProperties:
@@ -24,29 +25,28 @@ additionalProperties:
   # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
   tags:
     - Website
-    - Local
 
   # === 描述信息字段（选填，建议填写）===
   # 多语言描述，建议20-30个字符，v2 版本格式
   description:
     # 简体中文
-    zh: GoTab 是一个性化浏览器新标签页、起始页、个人主页。
+    zh: GoTab 是一个个性化浏览器新标签页、起始页、个人主页。
     # 繁体中文
-    zh-hant: GoTab 是一個性化瀏覽器新標籤頁、起始頁、個人主頁。
+    zh-hant: GoTab 是一個个性化瀏覽器新標籤頁、起始頁、個人主頁。
     # 英文
     en: GoTab is a personalized browser new tab page, start page, and personal home page.
     # 日语
-    ja: 
+    ja: GoTabは、パーソナライズされたブラウザの新しいタブページ、スタートページ、個人用ホームページです。
     # 马来语
-    ms: 
+    ms: GoTab ialah halaman tab baharu, halaman permulaan, dan halaman rumah peribadi pelayar yang diperibadikan.
     # 巴西葡萄牙语
-    pt-br: 
+    pt-br: GoTab é uma página de nova aba personalizada do navegador, página inicial e página inicial pessoal.
     # 俄语
-    ru: 
+    ru: GoTab — это персонифицированная новая вкладка браузера, стартовая страница и личная домашняя страница.
     # 韩语
-    ko: 
+    ko: GoTab은 개인화된 브라우저 새 탭 페이지, 시작 페이지 및 개인 홈 페이지입니다.
     # 土耳其语
-    tr: 
+    tr: GoTab, kişiselleştirilmiş bir tarayıcı yeni sekme sayfası, başlangıç sayfası ve kişisel ana sayfasıdır.
 
   # === 功能配置字段（选填）===
   # 是否支持跨版本更新，默认false
@@ -73,7 +73,6 @@ additionalProperties:
   architectures:
     - amd64
     - arm64
-
   # 是否需要GPU支持，默认false
   gpuSupport: false
   

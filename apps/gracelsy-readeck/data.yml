@@ -21,7 +21,7 @@ additionalProperties:
   # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
   #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
   #        tool: 工具类应用，大部分应用不属于上述两类的，可归为工具类，如 FileBrowser、phpMyAdmin 等
-  type: Tool
+  type: tool
   # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
   tags:
     - Tool
@@ -40,7 +40,7 @@ additionalProperties:
     # 马来语
     ms: Readeck adalah alat bantu baca-lagi yang terbuka sumber (open-source) yang memungkinkan pengguna menyimpan halaman web untuk dibaca nanti.
     # 巴西葡萄牙语
-    pt-br: 
+    pt-br: Readeck é uma ferramenta de leitura posterior de código aberto.
     # 俄语
     ru: Readeck — это открытый инструмент для чтения позже.
     # 韩语

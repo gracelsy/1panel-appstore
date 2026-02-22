@@ -1,33 +1,86 @@
+# === 官方应用商店兼容字段（上架官方商店必填，其余情况选填）===
+# https://apps.fit2cloud.com/1panel
+# 显示名称
 name: Vaultwarden-mysql
+# 分类标签
 tags:
   - 密码管理
   - 自托管
   - 安全
+# 副标题
 title: 轻量、安全、兼容 Bitwarden 的密码管理服务
+# 应用描述
 description: 一个轻量级、自托管的密码管理服务，兼容 Bitwarden 客户端，适合个人或小团队使用，该版本为mysql版本应用
+
+# === 以下为 1Panel 应用商店解析的数据结构，必须保留此结构 ===
 additionalProperties:
+  # === 必填字段 ===
+  # 应用程序唯一标识符，用于系统内部识别及创建文件夹，仅限英文（必填）
   key: gracelsy-vaultwarden-mysql
+  # 应用程序显示名称（必填）
   name: Vaultwarden-mysql
+  # 应用程序类型（必填）
+  # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
+  #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
+  #        tool: 工具类应用，大部分应用不属于上述两类的，可归为工具类，如 FileBrowser、phpMyAdmin 等
+  type: tool
+  # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
   tags:
     - Tool
-    - Security
-  shortDescZh: Bitwarden 的轻量开源替代方案
-  shortDescEn: Lightweight, self-hosted alternative to Bitwarden
-  type: Tool
-  crossVersionUpdate: true
-  limit: 0
-  website: https://github.com/dani-garcia/vaultwarden
-  github: https://github.com/dani-garcia/vaultwarden
-  document: https://github.com/dani-garcia/vaultwarden/wiki
+
+  # === 描述信息字段（选填，建议填写）===
+  # 多语言描述，建议20-30个字符，v2 版本格式
   description:
-    en: A lightweight, secure, and self-hosted password manager compatible with Bitwarden clients.
+    # 简体中文
     zh: 一个轻量、安全、可自托管的密码管理服务，兼容 Bitwarden 客户端。
-    zh-Hant: 一個輕量、安全、自託管的密碼管理工具，兼容 Bitwarden。
+    # 繁体中文
+    zh-hant: 一個輕量、安全、自託管的密碼管理工具，兼容 Bitwarden。
+    # 英文
+    en: A lightweight, secure, and self-hosted password manager compatible with Bitwarden clients.
+    # 日语
     ja: Bitwarden クライアントと互換性のある軽量なセルフホスティング型パスワードマネージャー。
+    # 马来语
     ms: Pengurus kata laluan yang ringan dan selamat serta boleh dihoskan sendiri, serasi dengan Bitwarden.
+    # 巴西葡萄牙语
     pt-br: Um gerenciador de senhas leve, seguro e auto-hospedado compatível com clientes Bitwarden.
+    # 俄语
     ru: Лёгкий, безопасный и самодостаточный менеджер паролей, совместимый с клиентами Bitwarden.
+    # 韩语
     ko: Bitwarden 클라이언트와 호환되는 가볍고 안전한 셀프 호스팅 비밀번호 관리자입니다.
+    # 土耳其语
+    tr: Bitwarden istemcileriyle uyumlu, hafif, güvenli ve kendi barındırılan bir parola yöneticisidir.
+
+  # === 功能配置字段（选填）===
+  # 是否支持跨版本更新，默认false
+  crossVersionUpdate: true
+  # 安装数量限制，0表示无限制，默认0
+  limit: 0
+  # 推荐级别，数值越小越推荐，用于应用商店排序，默认9999
+  recommend: 0
+
+  # === 链接信息字段（选填）===
+  # 官方网站链接，必须是有效的 HTTP/HTTPS URL
+  website: https://github.com/dani-garcia/vaultwarden
+  # GitHub 仓库链接，必须是有效的HTTP/HTTPS URL
+  github: https://github.com/dani-garcia/vaultwarden
+  # 文档链接，必须是有效的HTTP/HTTPS URL
+  document: https://github.com/dani-garcia/vaultwarden/wiki
+
+  # === 系统要求字段（选填）===
+  # 内存要求（MB），用于系统资源检查和用户提示
+  # 常见值：512, 1024, 2048, 4096
+  # memoryRequired: 512
+  # 支持的 CPU 架构数组
+  # 可选值：amd64, arm64, armv7, ppc64le, s390x, riscv64
   architectures:
     - amd64
     - arm64
+  # 是否需要GPU支持，默认false
+  gpuSupport: false
+  
+  # === 版本兼容性字段（选填）===
+  # 最低面板版本要求，0表示无要求，默认0
+  # 示例：1.0, 1.5, 2.0
+  version: 0
+  # 废弃版本标记，0表示未废弃，默认0，若不为 0，则与当前系统版本号对比，若大于等于该版本号，则不出现在应用商店中
+  deprecated: 0

@@ -21,7 +21,7 @@ additionalProperties:
   # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
   #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
   #        tool: 工具类应用，大部分应用不属于上述两类的，可归为工具类，如 FileBrowser、phpMyAdmin 等
-  type: Tool
+  type: tool
   # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
   tags:
     - Tool
@@ -36,17 +36,17 @@ additionalProperties:
     # 英文
     en: A simple, secure, and decentralized VPN tunnel scheme
     # 日语
-    ja: 
+    ja: シンプルで安全な分散型VPNトンネルスキーム
     # 马来语
-    ms: 
+    ms: Skim terowong VPN yang ringkas, selamat dan terdesentralisasi
     # 巴西葡萄牙语
-    pt-br: 
+    pt-br: Um esquema de túnel VPN simples, seguro e descentralizado
     # 俄语
-    ru: 
+    ru: Простая, безопасная и децентрализованная схема туннеля VPN
     # 韩语
-    ko: 
+    ko: 간단하고 안전한 분산형 VPN 터널 스키마
     # 土耳其语
-    tr: 
+    tr: Basit, güvenli ve merkezi olmayan bir VPN tüneli şeması
 
   # === 功能配置字段（选填）===
   # 是否支持跨版本更新，默认false

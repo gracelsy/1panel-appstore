@@ -3,7 +3,8 @@
 # 显示名称
 name: FastSend
 # 分类标签
-tags: 建站
+tags:
+  - 建站
 # 副标题
 title: FastSend 是一个基于 WebRTC 技术的点对点文件传输工具，支持快速的目录同步和文件传输。
 # 应用描述
@@ -24,7 +25,6 @@ additionalProperties:
   # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
   tags:
     - Website
-    - Local
 
   # === 描述信息字段（选填，建议填写）===
   # 多语言描述，建议20-30个字符，v2 版本格式
@@ -73,7 +73,6 @@ additionalProperties:
   architectures:
     - amd64
     - arm64
-
   # 是否需要GPU支持，默认false
   gpuSupport: false
   

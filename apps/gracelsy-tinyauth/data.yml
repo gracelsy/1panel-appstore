@@ -1,33 +1,85 @@
+# === 官方应用商店兼容字段（上架官方商店必填，其余情况选填）===
+# https://apps.fit2cloud.com/1panel
+# 显示名称
 name: TinyAuth
+# 分类标签
 tags:
   - 开发工具
   - 安全
+# 副标题
 title: 轻量级OAuth2/OIDC认证代理，支持多身份提供商的统一登录解决方案
+# 应用描述
 description: 一个轻量级的OAuth2和OIDC认证代理工具，常用于在现有Web服务前添加统一登录认证。
+
+# === 以下为 1Panel 应用商店解析的数据结构，必须保留此结构 ===
 additionalProperties:
+  # === 必填字段 ===
+  # 应用程序唯一标识符，用于系统内部识别及创建文件夹，仅限英文（必填）
   key: gracelsy-tinyauth
+  # 应用程序显示名称（必填）
   name: TinyAuth
-  tags:
-    - DevTool
-    - Security
-  shortDescZh: 轻量级OAuth2/OIDC认证代理，支持多身份提供商的一站式登录认证
-  shortDescEn: Lightweight OAuth2/OIDC authentication proxy with multi-provider SSO support
+  # 应用程序类型（必填）
+  # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
+  #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
+  #        tool: 工具类应用，大部分应用不属于上述两类的，可归为工具类，如 FileBrowser、phpMyAdmin 等
   type: website
-  crossVersionUpdate: true
-  limit: 0
-  recommend: 0
-  website: https://tinyauth.app/
-  github: https://github.com/steveiliop56/tinyauth
-  document: https://tinyauth.app/docs/
+  # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
+  tags:
+    - Tool
+
+  # === 描述信息字段（选填，建议填写）===
+  # 多语言描述，建议20-30个字符，v2 版本格式
   description:
-    en: A lightweight reverse proxy and authentication middleware supporting multiple OAuth2 and OpenID Connect providers, ideal for securing existing web services with SSO.
+    # 简体中文
     zh: 一个轻量级的反向代理与认证中间件，支持多种OAuth2和OIDC身份提供商，为现有Web服务提供统一登录保护。
-    zh-Hant: 一個輕量級的反向代理與認證中介軟體，支援多種OAuth2和OIDC身份提供商，為既有Web服務提供單一登入保護。
+    # 繁体中文
+    zh-hant: 一個輕量級的反向代理與認證中介軟體，支援多種OAuth2和OIDC身份提供商，為既有Web服務提供單一登入保護。
+    # 英文
+    en: A lightweight reverse proxy and authentication middleware supporting multiple OAuth2 and OpenID Connect providers, ideal for securing existing web services with SSO.
+    # 日语
     ja: 複数のOAuth2およびOIDCプロバイダーに対応した軽量認証プロキシで、既存のWebサービスにSSO保護を追加可能。
+    # 马来语
     ms: Proksi pengesahan ringan yang menyokong penyedia OAuth2 dan OIDC pelbagai, sesuai untuk melindungi perkhidmatan web sedia ada dengan SSO.
+    # 巴西葡萄牙语
     pt-br: Proxy de autenticação leve que suporta múltiplos provedores OAuth2 e OIDC, adequado para proteger serviços web existentes com SSO.
+    # 俄语
     ru: Легковесный обратный прокси и провайдер аутентификации, поддерживающий OAuth2 и OIDC, обеспечивающий единую точку входа для существующих веб-сервисов.
+    # 韩语
     ko: 다양한 OAuth2 및 OIDC 제공자를 지원하는 경량 인증 프록시로, 기존 웹 서비스에 단일 로그인 보호를 제공합니다.
+    # 土耳其语
+    tr: Birden fazla OAuth2 ve OIDC sağlayıcısını destekleyen hafif kimlik doğrulama proxy'si, mevcut web hizmetlerini SSO ile korumak için idealdir.
+
+  # === 功能配置字段（选填）===
+  # 是否支持跨版本更新，默认false
+  crossVersionUpdate: true
+  # 安装数量限制，0表示无限制，默认0
+  limit: 0
+  # 推荐级别，数值越小越推荐，用于应用商店排序，默认9999
+  recommend: 0
+
+  # === 链接信息字段（选填）===
+  # 官方网站链接，必须是有效的 HTTP/HTTPS URL
+  website: https://tinyauth.app/
+  # GitHub 仓库链接，必须是有效的HTTP/HTTPS URL
+  github: https://github.com/steveiliop56/tinyauth
+  # 文档链接，必须是有效的HTTP/HTTPS URL
+  document: https://tinyauth.app/docs/
+
+  # === 系统要求字段（选填）===
+  # 内存要求（MB），用于系统资源检查和用户提示
+  # 常见值：512, 1024, 2048, 4096
+  # memoryRequired: 512
+  # 支持的 CPU 架构数组
+  # 可选值：amd64, arm64, armv7, ppc64le, s390x, riscv64
   architectures:
     - amd64
     - arm64
+  # 是否需要GPU支持，默认false
+  gpuSupport: false
+  
+  # === 版本兼容性字段（选填）===
+  # 最低面板版本要求，0表示无要求，默认0
+  # 示例：1.0, 1.5, 2.0
+  version: 0
+  # 废弃版本标记，0表示未废弃，默认0，若不为 0，则与当前系统版本号对比，若大于等于该版本号，则不出现在应用商店中
+  deprecated: 0

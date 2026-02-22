@@ -21,7 +21,7 @@ additionalProperties:
   # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
   #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
   #        tool: 工具类应用，大部分应用不属于上述两类的，可归为工具类，如 FileBrowser、phpMyAdmin 等
-  type: Tool
+  type: tool
   # 分类标签数组，用于应用商店分类显示（必填），可选值可见：https://github.com/1Panel-dev/appstore/blob/dev/data.yaml
   tags:
     - Tool
@@ -36,17 +36,17 @@ additionalProperties:
     # 英文
     en: RustDesk API Web Console, with official S6 service.
     # 日语
-    ja: 
+    ja: RustDesk API Webコンソール、公式のS6サービス付き。
     # 马来语
-    ms: 
+    ms: Konsol Web API RustDesk, dengan perkhidmatan S6 rasmi.
     # 巴西葡萄牙语
-    pt-br: 
+    pt-br: Console Web da API do RustDesk, com serviço S6 oficial.
     # 俄语
-    ru: 
+    ru: Веб-консоль API RustDesk с официальным сервисом S6.
     # 韩语
-    ko: 
+    ko: RustDesk API 웹 콘솔, 공식 S6 서비스 포함.
     # 土耳其语
-    tr: 
+    tr: RustDesk API Web Konsolu, resmi S6 servisi ile birlikte.
 
   # === 功能配置字段（选填）===
   # 是否支持跨版本更新，默认false
