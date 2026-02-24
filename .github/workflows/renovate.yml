@@ -9,9 +9,9 @@ on:
         description: 'Manually trigger Renovate'
         default: ''
   # 代码推送触发：当代码推送到 main 分支时
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
 jobs:
   renovate:
     runs-on: ubuntu-latest
