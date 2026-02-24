@@ -1,0 +1,18 @@
+services:
+  lucky:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data:/goodluck
+    image: gdy666/lucky:2.27.2
+    environment:
+      - TZ=${TIME_ZONE}                       # 时区设置
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    devices:
+      - /dev/net/tun:/dev/net/tun  # 挂载tun设备
+
+    labels:  
+      createdBy: "Apps"
