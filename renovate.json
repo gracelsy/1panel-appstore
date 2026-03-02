@@ -23,6 +23,12 @@
         "apps/gracelsy-tinyauth/4.*.*/*.yml"
       ],
       "allowedVersions": "/^4.*/"
+    },
+    {
+      "matchFileNames": [
+        "apps/gracelsy-kvrocks/2.*.*/*.yml"
+      ],
+      "allowedVersions": "/^2.*/"
     }
   ],
   "prCreation": "immediate"
