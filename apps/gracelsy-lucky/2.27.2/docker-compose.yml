@@ -5,7 +5,7 @@ services:
     network_mode: host
     volumes:
       - ./data:/goodluck
-    image: gdy666/lucky:2.27.2
+    image: gdy666/lucky:3.0.0
     environment:
       - TZ=${TIME_ZONE}                       # 时区设置
     cap_add:
