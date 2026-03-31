@@ -1,6 +1,6 @@
 services:                                     
   fastsend:                          
-    image: shouchenicu/fastsend:0.6.0                       
+    image: shouchenicu/fastsend:0.7.1                       
     container_name: ${CONTAINER_NAME}         
     networks:                                 
       - 1panel-network                        
