@@ -1,0 +1,63 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        en: Port
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      label:
+        zh: 时区
+        en: Time Zone
+      required: true
+      type: text
+    - default: "admin"
+      edit: true
+      envKey: S3_ACCESS_KEY
+      label:
+        zh: S3 Access Key
+        en: S3 Access Key
+      required: true
+      type: text
+    - default: "password"
+      edit: true
+      envKey: S3_SECRET_KEY
+      label:
+        zh: S3 Secret Key
+        en: S3 Secret Key
+      required: true
+      type: password
+    - default: "round-robin"
+      edit: true
+      envKey: BALANCER_STRATEGY
+      label:
+        zh: 负载均衡策略
+        en: Balancer Strategy
+      required: true
+      type: select
+      options:
+        - label: round-robin
+          value: round-robin
+        - label: least-space
+          value: least-space
+        - label: weighted
+          value: weighted
+    - default: "proxy"
+      edit: true
+      envKey: S3_MODE
+      label:
+        zh: 传输模式
+        en: Transfer Mode
+      required: true
+      type: select
+      options:
+        - label: proxy
+          value: proxy
+        - label: redirect
+          value: redirect

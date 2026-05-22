@@ -1,0 +1,19 @@
+services:
+  s3-balance:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: bridge
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    image: dulljz/s3-balance:v0.2.4
+    environment:
+      - TZ=${TIME_ZONE}
+      - S3_ACCESS_KEY=${S3_ACCESS_KEY}
+      - S3_SECRET_KEY=${S3_SECRET_KEY}
+      - BALANCER_STRATEGY=${BALANCER_STRATEGY}
+      - S3_MODE=${S3_MODE}
+    labels:  
+      createdBy: "Apps"
