@@ -1,22 +1,22 @@
 # === 官方应用商店兼容字段（上架官方商店必填，其余情况选填） ===
 # https://apps.fit2cloud.com/1panel
 # 显示名称
-name: dnsmgr
+name: mtab
 # 分类标签
 tags:
   - 实用工具
 # 副标题
-title: 轻量级多上游 DNS 聚合管理系统
+title: mTab新标签页
 # 应用描述
-description: 彩虹聚合DNS管理系统是一个支持多上游 DNS 聚合、智能分流、缓存加速与可视化管理的轻量级 DNS 管理方案，支持 DoH/DoT/DoQ 等现代协议。
+description: Mtab书签的界面设计美观简洁，操作简单直观，让你可以专注于你的网络活动，而不是应用本身。它是你高效、无忧的网络生活的理想伴侣。 高效流畅的操作体验：超级简约却强大的操作逻辑，没有繁琐的操作流程即可处理复杂的事情。
 
 # === 以下为 1Panel 应用商店解析的数据结构，必须保留此结构 ===
 additionalProperties:
   # === 必填字段 ===
   # 应用程序唯一标识符，用于系统内部识别及创建文件夹，仅限英文（必填）
-  key: gracelsy-dnsmgr
+  key: gracelsy-mtab
   # 应用程序显示名称（必填）
-  name: dnsmgr
+  name: mtab
   # 应用程序类型（必填）
   # 可选值: website: 网站应用，支持在1Panel中一键部署，如 Wordpress、Halo等
   #        runtime: 运行时环境，如 MySQL、Redis、OpenResty 等
@@ -29,25 +29,25 @@ additionalProperties:
 
   # === 描述信息字段（选填，建议填写）===
   # 多语言描述，建议20-30个字符，v2 版本格式
-  description:
+description:
     # 简体中文
-    zh: 轻量级多上游 DNS 聚合管理系统，支持智能分流、缓存加速与可视化管理，兼容 DoH/DoT/DoQ 等现代协议。情
+    zh: Mtab书签的界面设计美观简洁，操作简单直观，让你可以专注于你的网络活动，而不是应用本身。它是你高效、无忧的网络生活的理想伴侣。高效流畅的操作体验：超级简约却强大的操作逻辑，没有繁琐的操作流程即可处理复杂的事情。
     # 繁体中文
-    zh-hant: 輕量級多上游 DNS 聚合管理系統，支援智慧分流、快取加速與可視化管理，相容 DoH/DoT/DoQ 等現代協定
+    zh-hant: Mtab書籤的介面設計美觀簡潔，操作簡單直觀，讓你可以專注於你的網路活動，而不是應用本身。它是你高效、無憂的網路生活的理想伴侶。高效流暢的操作體驗：超級簡約卻強大的操作邏輯，沒有繁瑣的操作流程即可處理複雜的事情。
     # 英文
-    en: Lightweight multi-upstream DNS aggregation management system with intelligent traffic splitting, caching acceleration, visualization and modern protocols like DoH/DoT/DoQ support
+    en: Mtab Bookmark features a clean and elegant interface with simple, intuitive operations, letting you focus on your online activities rather than the app itself. It is the ideal companion for an efficient, worry-free web life. Efficient and smooth experience: an ultra-simple yet powerful operational logic that handles complex tasks without cumbersome workflows.
     # 日语
-    ja: 軽量マルチアップストリームDNS集約管理システム、インテリジェント分流・キャッシュ加速・可視化管理対応、DoH/DoT/DoQ等の現代プロトコルに互換
+    ja: Mtab Bookmarkは、美しくシンプルなインターフェースと直感的な操作性を備え、アプリそのものではなく、あなたのウェブ活動に集中できるようにします。効率的で安心なウェブライフの理想的なパートナーです。高效でスムーズな操作体験：極めてシンプルながら強力な操作ロジックにより、煩雑な手順なしで複雑なタスクを処理できます。
     # 马来语
-    ms: Sistem pengurusan agregasi DNS multi-upstream ringan, sokong pengalihan trafik pintar, pecutan cache, pengurusan visual dan protokol moden seperti DoH/DoT/DoQ
+    ms: Antara muka Mtab Bookmark yang kemas dan elegan, dengan operasi yang mudah dan intuitif, membolehkan anda memberi tumpuan kepada aktiviti web anda, bukannya aplikasi itu sendiri. Ia merupakan pasangan ideal untuk kehidupan web yang cekap dan bebas kerisauan. Pengalaman operasi yang cekap dan lancar: logik operasi yang sangat ringkas namun berkuasa, membolehkan tugas kompleks dikendalikan tanpa alur kerja yang rumit.
     # 巴西葡萄牙语
-    pt-br: Sistema leve de gerenciamento de agregação DNS multi-upstream, com divisão de tráfego inteligente, aceleração de cache, gerenciamento visual e suporte a protocolos modernos como DoH/DoT/DoQ
-    # 俄语
-    ru: Легковесная система агрегированного управления DNS с несколькими источниками, поддерживающая интеллектуальное распределение трафика, ускорение кэширования, визуализацию и современные протоколы DoH/DoT/DoQ
+    pt-br: O Mtab Bookmark possui uma interface limpa e elegante, com operações simples e intuitivas, permitindo que você se concentre em suas atividades na web, e não no aplicativo em si. É o companheiro ideal para uma vida web eficiente e sem preocupações. Experiência de operação eficiente e fluida: uma lógica operacional ultra-simples, porém poderosa, que lida com tarefas complexas sem fluxos de trabalho complicados.
+  # 俄语
+    ru: Интерфейс Mtab Bookmark отличается чистым и элегантным дизайном и интуитивно понятным управлением, позволяя вам сосредоточиться на веб-активностях, а не на самом приложении. Это идеальный компаньон для эффективной и спокойной жизни в сети. Эффективный и плавный пользовательский опыт: предельно простая, но мощная логика управления, позволяющая решать сложные задачи без громоздких рабочих процессов.
     # 韩语
-    ko: 경량 다중 업스트림 DNS 집약 관리 시스템, 지능형 트래픽 분산·캐시 가속·시각화 관리 지원, DoH/DoT/DoQ 등 현대 프로토콜 호환
+    ko: Mtab Bookmark는 깔끔하고 우아한 인터페이스와 직관적인 조작 방식을 제공하여, 앱 자체보다 웹 활동에 집중할 수 있도록 돕습니다. 효율적이고 걱정 없는 웹 라이프를 위한 이상적인 파트너입니다. 효율적이고 부드러운 조작 경험: 극도로 단순하면서도 강력한 조작 로직으로, 번거로운 절차 없이 복잡한 작업을 처리할 수 있습니다.
     # 土耳其语
-    tr: Hafif çoklu yukarı akış DNS agregasyon yönetim sistemi, akıllı trafik ayırma, önbellek hızlandırma, görsel yönetim ve DoH/DoT/DoQ gibi modern protokollerle uyumlu
+    tr: Mtab Bookmark; temiz ve zarif arayüzü ile basit, sezgisel kullanımı sayesinde uygulamadan çok web etkinliklerinize odaklanmanızı sağlar. Verimli ve sorunsuz bir web yaşamı için ideal bir companionsdır. Verimli ve akıcı kullanım deneyimi: son derece basit ancak güçlü bir işlem mantığıyla, karmaşık görevleri zahmetli iş akışlarına gerek kalmadan yerine getirir.
 
   # === 功能配置字段（选填）===
   # 是否支持跨版本更新，默认false
@@ -59,11 +59,11 @@ additionalProperties:
 
   # === 链接信息字段（选填）===
   # 官方网站链接，必须是有效的 HTTP/HTTPS URL
-  website: https://github.com/netcccyun/dnsmgr
+  website: https://www.mtab.cc
   # GitHub 仓库链接，必须是有效的HTTP/HTTPS URL
-  github: https://github.com/netcccyun/dnsmgr
+  github: https://github.com/tsxcw/mtab
   # 文档链接，必须是有效的HTTP/HTTPS URL
-  document: https://github.com/netcccyun/dnsmgr
+  document: https://jmp6y44jr4.k.topthink.com/@mtab/mtab.html
 
   # === 系统要求字段（选填）===
   # 内存要求（MB），用于系统资源检查和用户提示
