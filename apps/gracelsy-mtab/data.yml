@@ -29,7 +29,7 @@ additionalProperties:
 
   # === 描述信息字段（选填，建议填写）===
   # 多语言描述，建议20-30个字符，v2 版本格式
-description:
+  description:
     # 简体中文
     zh: Mtab书签的界面设计美观简洁，操作简单直观，让你可以专注于你的网络活动，而不是应用本身。它是你高效、无忧的网络生活的理想伴侣。高效流畅的操作体验：超级简约却强大的操作逻辑，没有繁琐的操作流程即可处理复杂的事情。
     # 繁体中文
@@ -42,7 +42,7 @@ description:
     ms: Antara muka Mtab Bookmark yang kemas dan elegan, dengan operasi yang mudah dan intuitif, membolehkan anda memberi tumpuan kepada aktiviti web anda, bukannya aplikasi itu sendiri. Ia merupakan pasangan ideal untuk kehidupan web yang cekap dan bebas kerisauan. Pengalaman operasi yang cekap dan lancar: logik operasi yang sangat ringkas namun berkuasa, membolehkan tugas kompleks dikendalikan tanpa alur kerja yang rumit.
     # 巴西葡萄牙语
     pt-br: O Mtab Bookmark possui uma interface limpa e elegante, com operações simples e intuitivas, permitindo que você se concentre em suas atividades na web, e não no aplicativo em si. É o companheiro ideal para uma vida web eficiente e sem preocupações. Experiência de operação eficiente e fluida: uma lógica operacional ultra-simples, porém poderosa, que lida com tarefas complexas sem fluxos de trabalho complicados.
-  # 俄语
+    # 俄语
     ru: Интерфейс Mtab Bookmark отличается чистым и элегантным дизайном и интуитивно понятным управлением, позволяя вам сосредоточиться на веб-активностях, а не на самом приложении. Это идеальный компаньон для эффективной и спокойной жизни в сети. Эффективный и плавный пользовательский опыт: предельно простая, но мощная логика управления, позволяющая решать сложные задачи без громоздких рабочих процессов.
     # 韩语
     ko: Mtab Bookmark는 깔끔하고 우아한 인터페이스와 직관적인 조작 방식을 제공하여, 앱 자체보다 웹 활동에 집중할 수 있도록 돕습니다. 효율적이고 걱정 없는 웹 라이프를 위한 이상적인 파트너입니다. 효율적이고 부드러운 조작 경험: 극도로 단순하면서도 강력한 조작 로직으로, 번거로운 절차 없이 복잡한 작업을 처리할 수 있습니다.
