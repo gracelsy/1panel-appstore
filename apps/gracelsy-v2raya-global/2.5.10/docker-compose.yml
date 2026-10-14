@@ -19,10 +19,5 @@ services:
       - /etc/resolv.conf:/etc/resolv.conf
       - /lib/modules:/lib/modules:ro
     environment:
-      - V2RAYA_ADDRESS=0.0.0.0:${PANEL_APP_PORT_HTTP}
       - V2RAYA_LOG_FILE=/tmp/v2raya.log
-      - V2RAYA_PLUGINLISTENPORT=${PANEL_APP_PORT_PLUGIN}
-      - IPTABLES_MODE=legacy
-      - V2RAYA_NFTABLES_SUPPORT=off
-      - V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray
       - TZ=${TIME_ZONE}

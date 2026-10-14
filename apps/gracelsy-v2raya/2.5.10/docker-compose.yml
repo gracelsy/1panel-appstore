@@ -4,7 +4,7 @@ networks:
 
 services:
   v2raya:
-    image: mzz2017/v2raya:v2.2.7.5
+    image: mzz2017/v2raya:v2.5.10
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -22,8 +22,5 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /lib/modules:/lib/modules:ro
     environment:
-      - V2RAYA_ADDRESS=0.0.0.0:2017
       - V2RAYA_LOG_FILE=/tmp/v2raya.log
-      - V2RAYA_PLUGINLISTENPORT=32346
-      - V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray
       - TZ=${TIME_ZONE}
